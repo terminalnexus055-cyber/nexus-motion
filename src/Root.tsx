@@ -1,6 +1,7 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { Overlay } from "./Overlay";
+import {LowerThird} from './LowerThird';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -13,6 +14,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
       />
-    </>
+    			<Composition
+					id="LowerThird"
+					component={LowerThird}
+					durationInFrames={60}
+					width={1920}
+					height={1080}
+					fps={30}
+					defaultProps={{}}
+				/>
+						</>
   );
 };
